@@ -8,6 +8,7 @@ namespace Practice2
         public Form1()
         {
             InitializeComponent();
+            runButton.Click += runButton_Click;
         }
 
         private void runButton_MouseEnter(object sender, EventArgs e)
@@ -26,6 +27,12 @@ namespace Practice2
 
             // 4. 시각적 피드백(폼 제목 표시줄에 좌표 출력)
             this.Text = $"버튼위치: ({nextX}, {nextY})";
+        }
+
+        // 버튼 클릭 시 메시지 박스 표시
+        private void runButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("잡았다~!");
         }
     }
 }
