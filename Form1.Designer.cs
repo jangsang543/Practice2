@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             runButton = new Button();
+            restartButton = new Button();
             SuspendLayout();
             // 
             // runButton
@@ -41,13 +42,27 @@
             runButton.TabIndex = 0;
             runButton.Text = "나를 잡아라";
             runButton.UseVisualStyleBackColor = false;
+            runButton.Click += runButton_Click;
             runButton.MouseEnter += runButton_MouseEnter;
+            // 
+            // restartButton
+            // 
+            restartButton.BackColor = SystemColors.MenuHighlight;
+            restartButton.Font = new Font("휴먼모음T", 26F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            restartButton.Location = new Point(12, 12);
+            restartButton.Name = "restartButton";
+            restartButton.Size = new Size(508, 159);
+            restartButton.TabIndex = 1;
+            restartButton.Text = "다시 시작";
+            restartButton.UseVisualStyleBackColor = false;
+            restartButton.Click += restartButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1181, 712);
+            Controls.Add(restartButton);
             Controls.Add(runButton);
             Name = "Form1";
             Text = "Form1";
@@ -57,5 +72,6 @@
         #endregion
 
         private Button runButton;
+        private Button restartButton;
     }
 }
